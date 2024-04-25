@@ -15,7 +15,7 @@
 /*=============== SCROLLBAR ===============*/
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -56,11 +56,11 @@ p {
 }
 
 h1 {
-  line-height: 0.5rem;
+  line-height: 4rem;
 }
 
 h2 {
-  line-height: 1rem;
+  line-height: 2rem;
   font-weight: normal;
 }
 
@@ -139,15 +139,8 @@ h2 {
 }
 
 .header h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-svg {
-    margin-right: 0px;
-    width: 0.9rem; /* Adjust the SVG width as desired */
-   
+  font-size: 2.5rem;
+  
 }
 .header h2 {
   font-size: 1rem;
@@ -173,12 +166,12 @@ svg {
 .header .cta {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.274);
-  padding: 10px 20px;
-  margin: 50px 0;
+  padding: 8px 8px;
+  margin: 40px 0;
   border-radius: 30px;
   transition: 0.2s linear;
   transition-property: background-color, color;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 100px 20px rgba(0, 0, 0, 0.1);
 }
 
 .header .cta:hover {
@@ -187,6 +180,7 @@ svg {
   transition: 0.2s linear;
   transition-property: background-color, color;
 }
+
 /*=============== CONTENT ===============*/
 
 .content {
@@ -213,15 +207,13 @@ svg {
   font-size: 3.5rem;
   font-weight: bolder;
   text-align: center;
-  margin: 15px;
-  justify-content: center;
-
+  margin: 20px;
 }
+
 /*=============== ABOUT SECTION ===============*/
 
 .about {
   display: flex;
-  text-align: center;
   flex-direction: column;
 }
 
@@ -252,12 +244,16 @@ svg {
   background: var(--accent-color);
 }
 
-.English {
+.Hindi {
+  width: 100%;
+}
+
+.english {
   width: 75%;
 }
 
-.Hindi {
-  width: 100%;
+.french {
+  width: 50%;
 }
 
 .skill {
@@ -265,7 +261,7 @@ svg {
   color: #fff;
   line-height: 35px;
   padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 /*=============== PROJECTS SECTION ===============*/
@@ -480,7 +476,7 @@ textarea {
     margin: 0 15px;
   }
   .home h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   ::-webkit-scrollbar {
@@ -515,19 +511,137 @@ textarea {
     margin: 0 30px;
   }
   .home h1 {
-    font-size: 0.5rem;
-    line-height: 1rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #10002B;
+}
+
+body {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-position:center;
+  background-size:cover;
+  overflow: hidden;
+}
+  
+
+/********/
+.glowing {
+  min-width: 700px;
+  height: 550px;
+  margin: -150px;
+  transform-origin: right;
+  animation: colorChange 10s linear infinite;
+}
+
+
+.glowing:nth-child(even) {
+  transform-origin: left;
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-/* A little cheat to trick the freecodecamp certification test. It requires 
-the navbar to be on top of the viewport, but I've already done that in previous 
-projects and I think in this one it looks more interesting on the side.
-I hope the freecodecamp team won't be mad at me :) */
-#navbar {
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  width: 0;
-  height: 0;
+.glowing span {
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
 }
+
+.glowing span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1)::before {
+  background: rgba(134,255,0,1);
+  box-shadow: 0 0 20px rgba(134,255,0,1),
+    0 0 40px rgba(134,255,0,1),
+    0 0 60px rgba(134,255,0,1),
+    0 0 80px rgba(134,255,0,1),
+    0 0 0 8px rgba(134,255,0,.1);
+}
+
+.glowing span:nth-child(3n + 2)::before {
+  background: rgba(255,214,0,1);
+  box-shadow: 0 0 20px rgba(255,214,0,1),
+    0 0 40px rgba(255,214,0,1),
+    0 0 60px rgba(255,214,0,1),
+    0 0 80px rgba(255,214,0,1),
+    0 0 0 8px rgba(255,214,0,.1);
+}
+
+.glowing span:nth-child(3n + 3)::before {
+  background: rgba(0,226,255,1);
+  box-shadow: 0 0 20px rgba(0,226,255,1),
+    0 0 40px rgba(0,226,255,1),
+    0 0 60px rgba(0,226,255,1),
+    0 0 80px rgba(0,226,255,1),
+    0 0 0 8px rgba(0,226,255,.1);
+}
+
+.glowing span:nth-child(3n + 1) {
+  animation: animate 10s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 2) {
+  animation: animate-reverse 3s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3) {
+  animation: animate 8s alternate infinite; 
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
