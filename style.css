@@ -1,5 +1,6 @@
 body {
             overflow-y: scroll; /* Enable vertical scrolling */
+            -webkit-overflow-scrolling: touch; 
         }
 
 /*=============== GOOGLE FONTS ===============*/
