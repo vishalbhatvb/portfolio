@@ -3,9 +3,6 @@ html {
 }
 
 
-.header {
-    transition: transform 0.3s ease; /* Example */
-}
 
 body {
     touch-action: pan-y; /* Allow vertical scrolling */
