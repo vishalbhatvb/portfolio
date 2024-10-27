@@ -1,7 +1,20 @@
 body {
-            overflow-y: scroll; /* Enable vertical scrolling */
-            -webkit-overflow-scrolling: touch; 
-        }
+    overflow-y: scroll; /* Enable vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    touch-action: auto; /* Allow default touch actions like scrolling */
+}
+
+.content {
+    height: auto; /* Ensure height is auto to allow scrolling */
+    overflow: visible; /* Avoid restricting overflow */
+}
+
+.content-card {
+    position: relative; /* Ensure normal positioning */
+    overflow: auto; /* Allow scrolling within this card if needed */
+}
+
+
 
 /*=============== GOOGLE FONTS ===============*/
 
